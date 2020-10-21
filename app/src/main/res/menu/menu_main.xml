@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainMenuManageAccount"
+        android:title="@string/manage_account"
+        />
+
+    <item
+        android:id="@+id/mainMenuHelp"
+        android:title="Help"
+        />
+
+    <item
+    android:id="@+id/mainMenuTest"
+    android:title="Test"
+    />
+
+
+</menu>
