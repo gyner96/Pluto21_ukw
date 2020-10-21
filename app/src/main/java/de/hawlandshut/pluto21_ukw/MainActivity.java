@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,16 +42,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // TODO: Clean up!
         switch( item.getItemId()) {
             case R.id.mainMenuHelp:
+                Toast.makeText(getApplicationContext(), "You pressed HELP.", Toast.LENGTH_LONG).show();
                 Log.d(TAG, "Menue Help erkannt");
                 return true;
 
             case R.id.mainMenuManageAccount:
+                Toast.makeText(getApplicationContext(), "You pressed MANAGE ACC.", Toast.LENGTH_LONG).show();
                 Log.d(TAG, "Menue Manage Account erkannt");
                 return true;
 
             case R.id.mainMenuTest:
+                Toast.makeText(getApplicationContext(), "You pressed TEST.", Toast.LENGTH_LONG).show();
                 Log.d(TAG, "Menue Test erkannt");
                 return true;
 
