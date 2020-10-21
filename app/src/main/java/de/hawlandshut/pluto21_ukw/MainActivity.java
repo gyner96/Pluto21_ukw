@@ -1,5 +1,6 @@
 package de.hawlandshut.pluto21_ukw;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
@@ -15,6 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "xx MainActivity";
 
+    // TODO: Just for testing; reomve later
+    private boolean mIsSignedIn = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart called");
+
+        // TODO: Change!
+        //  Ergänzen, dass wir **nur** in die SignIn-Activity wollen,
+        //  wenn der User nicht angemeldet ist.
+        if (this.mIsSignedIn){
+         ;
+        }
+        else {
+            Intent intent = new Intent(getApplication(),
+                    SignInActivity.class);
+            startActivity(intent);
+        }
     }
 
     /* Erzeugen des Menus aus der XML-Datei */
