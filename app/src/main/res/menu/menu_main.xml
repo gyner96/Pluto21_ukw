@@ -11,9 +11,14 @@
         />
 
     <item
-    android:id="@+id/mainMenuTest"
-    android:title="Test"
+    android:id="@+id/mainMenuGotoSignIn"
+    android:title="Zu Signin"
     />
+
+    <item
+        android:id="@+id/mainMenuGotoCreateAccount"
+        android:title="Zu CreateAccount"
+        />
 
 
 </menu>

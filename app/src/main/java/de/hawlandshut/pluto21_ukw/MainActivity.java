@@ -33,17 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         Log.d(TAG, "onStart called");
 
-        // TODO: Change!
-        //  Ergänzen, dass wir **nur** in die SignIn-Activity wollen,
-        //  wenn der User nicht angemeldet ist.
-        if (this.mIsSignedIn){
-         ;
-        }
-        else {
-            Intent intent = new Intent(getApplication(),
-                    SignInActivity.class);
-            startActivity(intent);
-        }
+
     }
 
     /* Erzeugen des Menus aus der XML-Datei */
@@ -59,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         // TODO: Clean up!
+        Intent intent;
         switch( item.getItemId()) {
             case R.id.mainMenuHelp:
                 Toast.makeText(getApplicationContext(), "You pressed HELP.", Toast.LENGTH_LONG).show();
@@ -70,9 +61,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Menue Manage Account erkannt");
                 return true;
 
-            case R.id.mainMenuTest:
-                Toast.makeText(getApplicationContext(), "You pressed TEST.", Toast.LENGTH_LONG).show();
-                Log.d(TAG, "Menue Test erkannt");
+            case R.id.mainMenuGotoSignIn:
+                intent = new Intent(getApplication(),
+                        SignInActivity.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.mainMenuGotoCreateAccount:
+                intent = new Intent(getApplication(),
+                        CreateAccountActivity.class);
+                startActivity(intent);
                 return true;
 
             default:
