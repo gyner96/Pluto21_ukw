@@ -20,5 +20,13 @@
         android:title="Zu CreateAccount"
         />
 
+    <item
+        android:id="@+id/mainMenuGotoManageAccount"
+        android:title="Zu ManageAccount"
+        />
 
+    <item
+        android:id="@+id/mainMenuGotoPost"
+        android:title="Zu Post"
+        />
 </menu>

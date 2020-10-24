@@ -73,6 +73,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
 
+            case R.id.mainMenuGotoManageAccount:
+                intent = new Intent(getApplication(),
+                        ManageAccountActivity.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.mainMenuGotoPost:
+                intent = new Intent(getApplication(),
+                        PostActivity.class);
+                startActivity(intent);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
